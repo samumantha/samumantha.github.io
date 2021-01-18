@@ -1,5 +1,11 @@
 # The URL the site will be built for
-base_url = "https://example.com"
+base_url = "https://samumantha.github.io/"
+
+title = "Samantha Wittke"
+
+description = "Welcome to my page!"
+
+theme = "hyde"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -14,3 +20,9 @@ highlight_code = false
 
 [extra]
 # Put all your custom variables here
+hyde_theme = "theme-base-0b"
+hyde_reverse = true
+hyde_links = [
+    {url = "https://google.com", name = "Google.com"},
+    {url = "https://github.com/samumantha" , name = "Github"}
+]
