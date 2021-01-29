@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://samumantha.github.io/</loc>
+    </url>
+    <url>
+        <loc>https://samumantha.github.io/about/</loc>
+    </url>
+    <url>
+        <loc>https://samumantha.github.io/blog/</loc>
+    </url>
+    <url>
+        <loc>https://samumantha.github.io/blog/blogpost/</loc>
+        <lastmod>2021-01-19</lastmod>
+    </url>
+    <url>
+        <loc>https://samumantha.github.io/cv/</loc>
+    </url>
+</urlset>
