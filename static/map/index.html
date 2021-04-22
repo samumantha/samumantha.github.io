@@ -45,8 +45,16 @@
           var map = new ol.Map({
             target: 'map'
           });
+          var vector = new ol.layer.Vector({
+            source: new ol.source.Vector({
+              url: './layer/kansallispuistot_syke_points_4326.geojson',
+              format: new ol.format.GeoJSON()
+             });
+          });
           // Add the created layer to the Map
           map.addLayer(osmLayer);
+          // Add vector to map
+          map.addLayer(vector);
           // Set the view for the map
           map.setView(view);
       </script>
