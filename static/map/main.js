@@ -18,6 +18,14 @@ var vector = new ol.layer.Vector({
     format: new ol.format.GeoJSON()
    })
 });
+vector.setStyle(
+  new Style({
+    image: new Icon({
+      color: '#BADA55',
+      crossOrigin: 'anonymous',
+    }),
+  })
+);
 
 // Add the created layer to the Map
 map.addLayer(osmLayer);
