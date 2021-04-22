@@ -3,6 +3,12 @@
   <head>
     <title>Hello OpenStreetMap</title>
     <link rel="stylesheet" href="./assets/css/ol.css" type="text/css" />
+    <style>
+      .map {
+        height: 600px;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <div id="map" class="map"></div>
@@ -12,12 +18,10 @@
         var osmLayer = new ol.layer.Tile({
           source: new ol.source.OSM()
         });
-        // Create latitude and longitude and convert them to default projection
-        var helsinki = ol.proj.transform([24.9375, 60.170633], 'EPSG:4326', 'EPSG:3857');
-        // Create a View, set it center and zoom level
+        // Create a View, set it center and zoom level to Helsinki
         var view = new ol.View({
-          center: helsinki,
-          zoom: 6
+          center: ol.proj.fromLonLat([24.9375, 60.170633]),
+          zoom: 4
         });
         // Instanciate a Map, set the object target to the map DOM id
         var map = new ol.Map({
