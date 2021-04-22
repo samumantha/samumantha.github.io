@@ -1,4 +1,3 @@
-import 'ol/ol.css';
 
 // Declare a Tile layer with an OSM source
 var osmLayer = new ol.layer.Tile({
