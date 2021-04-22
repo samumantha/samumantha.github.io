@@ -40,6 +40,7 @@ map.on('click', function (evt) {
     return feature;
   });
   if (feature) {
+    $(element).popover('dispose');
     var coordinates = feature.getGeometry().getCoordinates();
     popup.setPosition(coordinates);
     $(element).popover({
