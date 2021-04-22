@@ -18,6 +18,12 @@ var vector = new ol.layer.Vector({
     format: new ol.format.GeoJSON()
    })
 });
+
+// Add the created layer to the Map
+map.addLayer(osmLayer);
+// Add vector to map
+map.addLayer(vector);
+
 var element = document.getElementById('popup');
 
 var popup = new ol.Overlay({
@@ -57,10 +63,7 @@ map.on('pointermove', function (e) {
   var hit = map.hasFeatureAtPixel(pixel);
   map.getTarget().style.cursor = hit ? 'pointer' : '';
 });
-// Add the created layer to the Map
-map.addLayer(osmLayer);
-// Add vector to map
-map.addLayer(vector);
+
 // Set the view for the map
 map.setView(view);
      
