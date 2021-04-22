@@ -19,8 +19,8 @@ var vector = new ol.layer.Vector({
    })
 });
 vector.setStyle(
-  new ol.Style({
-    image: new ol.Icon({
+  new ol.style.Style({
+    image: new ol.style.Icon({
       color: '#BADA55',
       crossOrigin: 'anonymous',
     }),
