@@ -6,6 +6,13 @@
   <title>Samus page</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="../assets/css/ol.css" type="text/css" />
+  <style>
+    .map {
+      height: 600px;
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
@@ -13,22 +20,38 @@
     <a href="/about">About</a>
     <a href="/cv">CV</a>
     <a href="/blog/">Blog</a>
-    <a href="/map/">Blog</a>
+    <a href="/map">Map</a>
   </div>
   <section class="section">
     <div class="container">
-      
-<h1 class="title">
-  Hello!
-</h1>
-<p class="subtitle"><strong></strong></p>
-<p>You have reached the map</p>
+      <h1 class="title">
+      Hello
+      </h1>
+      <p>This is map</p>
 
-
+      <div id="map" class="map"></div>
+      <script src="../assets/js/ol.js"></script>
+      <script>
+          // Declare a Tile layer with an OSM source
+          var osmLayer = new ol.layer.Tile({
+            source: new ol.source.OSM()
+          });
+          // Create a View, set it center and zoom level to Helsinki
+          var view = new ol.View({
+            center: ol.proj.fromLonLat([24.9375, 60.170633]),
+            zoom: 4
+          });
+          // Instanciate a Map, set the object target to the map DOM id
+          var map = new ol.Map({
+            target: 'map'
+          });
+          // Add the created layer to the Map
+          map.addLayer(osmLayer);
+          // Set the view for the map
+          map.setView(view);
+      </script>
     </div>
   </section>
 </body>
 
 </html>
-
-    
