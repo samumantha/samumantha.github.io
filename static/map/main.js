@@ -18,14 +18,25 @@ var vector = new ol.layer.Vector({
     format: new ol.format.GeoJSON()
    })
 });
-vector.setStyle(
-  new ol.style.Style({
-    image: new ol.style.Icon({
-      color: '#BADA55',
-      crossOrigin: 'anonymous',
-    }),
-  })
-);
+
+var fill = new ol.style.Fill({
+   color: 'rgba(153,204,53,0.6)'
+ });
+ var stroke = new ol.style.Stroke({
+   color: '#cc3399',
+   width: 1.25
+ });
+ vector.setStyle(
+   new ol.style.Style({
+     image: new ol.style.Circle({
+       fill: fill,
+       stroke: stroke,
+       radius: 5
+     }),
+     fill: fill,
+     stroke: stroke
+   })
+ );
 
 // Add the created layer to the Map
 map.addLayer(osmLayer);
