@@ -1,3 +1,4 @@
+import 'ol/ol.css';
 
 // Declare a Tile layer with an OSM source
 var osmLayer = new ol.layer.Tile({
@@ -10,7 +11,7 @@ var view = new ol.View({
 });
 // Instanciate a Map, set the object target to the map DOM id
 var map = new ol.Map({
-  target: 'map'
+  target: document.getElementById('map'),
 });
 var vector = new ol.layer.Vector({
   source: new ol.source.Vector({
