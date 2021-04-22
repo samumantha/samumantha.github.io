@@ -1,5 +1,8 @@
 +++
 
-title="Map" template="cv.html"
+title="Map" 
+template="page.html"
 
 +++
+
+Hello
